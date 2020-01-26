@@ -104,7 +104,7 @@ namespace Gravical.Poker.Core.Tests
 
         private bool Match(Card[] expected, MadeHand actual)
         {
-            Guards.OperationSuccess(expected.Length == actual.Played.Length, "Impossible match");
+            Guards.Assert(expected.Length == actual.Played.Length, "Impossible match");
 
             var expectedSorted = expected.SortByFace();
             var actualSorted = actual.Played.SortByFace();

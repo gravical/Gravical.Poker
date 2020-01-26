@@ -1,11 +1,12 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Gravical.Poker.Core
 {
     /// <summary>
     /// Table represents the state of a Texas Holdem game from preflop through the river
     /// </summary>
-    public class Table
+    public class Table : ITable
     {
         private int _preFlopDeckSize;
 
@@ -16,6 +17,8 @@ namespace Gravical.Poker.Core
         public Card? Third { get; private set; }
         public Card? Turn { get; private set; }
         public Card? River { get; private set; }
+
+        public Guid Id { get; } = Guid.NewGuid();
 
         public Table()
         {
@@ -74,10 +77,15 @@ namespace Gravical.Poker.Core
             }
         }
 
+        public void Initialize()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void DealTheFlop()
         {
             AssertStatus(TableStatus.BeforeFlop);
-            Guards.OperationSuccess(Deck.Size >= 9, "There are not enough cards left in the deck to deal a table");
+            Guards.Assert(Deck.Size >= 9, "There are not enough cards left in the deck to deal a table");
             _preFlopDeckSize = Deck.Size;
             Deck.DrawCard();
             First = Deck.DrawCard();
@@ -106,17 +114,17 @@ namespace Gravical.Poker.Core
 
         private void AssertStatus(TableStatus status)
         {
-            Guards.OperationSuccess(Status == status, $"Unexpected dealing order. Expected {status} but actual is {Status}");
+            Guards.Assert(Status == status, $"Unexpected dealing order. Expected {status} but actual is {Status}");
         }
 
         private void AssertDeckSize(int plus)
         {
-            Guards.OperationSuccess(Deck.Size + plus == _preFlopDeckSize, "Deck has unexpectedly changed");
+            Guards.Assert(Deck.Size + plus == _preFlopDeckSize, "Deck has unexpectedly changed");
         }
 
         public TableFinal ToFinal()
         {
-            Guards.OperationSuccess(Status == TableStatus.Complete, "Table is not complete");
+            Guards.Assert(Status == TableStatus.Complete, "Table is not complete");
             return new TableFinal(First.Value, Second.Value, Third.Value, Turn.Value, River.Value);
         }
 

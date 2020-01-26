@@ -1,12 +1,9 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-*.suo
+﻿*.suo
 *.user
 
 **/.vs/*
 **/packages/*
+**/node_modules/*
 
 [Dd]ebug/
 [Rr]elease/
@@ -15,3 +12,8 @@
 
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+
+**/Gravical.Poker.Droid/*
+**/Gravical.Poker.Game/*
+**/Gravical.Poker.Game.Tests/*
+**/Sandbox/*

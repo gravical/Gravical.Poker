@@ -1,2 +1,4 @@
 # Gravical.Poker
-C# Texas Hold-em poker library
+Texas Hold-em poker library
+* C# .NET
+* JavaScript (ES6)

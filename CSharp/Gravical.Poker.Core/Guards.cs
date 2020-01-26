@@ -51,7 +51,7 @@ namespace Gravical.Poker.Core
             }
         }
 
-        public static void OperationSuccess(bool condition, string message)
+        public static void Assert(bool condition, string message)
         {
             if (!condition) throw new InvalidOperationException(message);
         }

@@ -22,11 +22,6 @@ namespace Gravical.Poker.Core
             return Enum.IsDefined(typeof(TableStatus), status);
         }
 
-        public static bool IsValid(this BettingRoundStatus status)
-        {
-            return Enum.IsDefined(typeof(BettingRoundStatus), status);
-        }
-
         public static bool IsValid(this HandTypes type)
         {
             return Enum.IsDefined(typeof(HandTypes), type);

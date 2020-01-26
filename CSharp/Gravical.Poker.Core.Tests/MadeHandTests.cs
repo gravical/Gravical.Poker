@@ -66,26 +66,26 @@ namespace Gravical.Poker.Core.Tests
         [TestMethod]
         public void Ctor_SerializedNull_ShouldThrowArgumentException()
         {
-            ActExpectingArgumentException("binary", "Value must be exactly 26 bytes", () => new MadeHand(null));
+            ActExpectingArgumentException("binary", "Value must be exactly 21 bytes", () => new MadeHand(null));
         }
 
         [TestMethod]
         public void Ctor_SerializedTooShort_ShouldThrowArgumentException()
         {
-            ActExpectingArgumentException("binary", "Value must be exactly 26 bytes", () => new MadeHand(new byte[25]));
+            ActExpectingArgumentException("binary", "Value must be exactly 21 bytes", () => new MadeHand(new byte[20]));
         }
 
         [TestMethod]
         public void Ctor_SerializedTooLong_ShouldThrowArgumentException()
         {
-            ActExpectingArgumentException("binary", "Value must be exactly 26 bytes", () => new MadeHand(new byte[27]));
+            ActExpectingArgumentException("binary", "Value must be exactly 21 bytes", () => new MadeHand(new byte[22]));
         }
 
         [TestMethod]
         public void Ctor_SerializedValid_ShouldConstruct()
         {
-            var actual = new MadeHand(Convert.FromBase64String("ASEiJAAAMjM0AABDAAAAAFQAAAAAYQAAAAA="));
-            Assert.AreEqual("ASEiJAAAMjM0AABDAAAAAFQAAAAAYQAAAAA=", Convert.ToBase64String(actual.Serialize()));
+            var actual = new MadeHand(Convert.FromBase64String("ASEiJAAyMzQAQwAAAFQAAABhAAAA"));
+            Assert.AreEqual("ASEiJAAyMzQAQwAAAFQAAABhAAAA", Convert.ToBase64String(actual.Serialize()));
         }
 
         [TestMethod]
@@ -99,7 +99,7 @@ namespace Gravical.Poker.Core.Tests
         public void Serialize_Normal_ShouldSerialize()
         {
             var arranged = new MadeHand(HandTypes.HighCard, HighHand, CreateBasicAlternates());
-            Assert.AreEqual("ASEiJAAAMjM0AABDAAAAAFQAAAAAYQAAAAA=", Convert.ToBase64String(arranged.Serialize()));
+            Assert.AreEqual("ASEiJAAyMzQAQwAAAFQAAABhAAAA", Convert.ToBase64String(arranged.Serialize()));
         }
 
         private Dictionary<Card, List<Card>> CreateBasicAlternates()

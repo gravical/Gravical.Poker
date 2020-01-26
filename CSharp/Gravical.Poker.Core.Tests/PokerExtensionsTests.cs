@@ -110,34 +110,6 @@ namespace Gravical.Poker.Core.Tests
 
         #endregion
 
-        #region  BettingRoundStatusIsValid
-
-        [TestMethod]
-        public void BettingRoundStatusIsValid_Negative_ShouldReturnFalse()
-        {
-            Assert.IsFalse(((BettingRoundStatus)(-1)).IsValid());
-        }
-
-        [TestMethod]
-        public void BettingRoundStatusIsValid_Zero_ShouldReturnFalse()
-        {
-            Assert.IsFalse(((BettingRoundStatus)0).IsValid());
-        }
-
-        [TestMethod]
-        public void BettingRoundStatusIsValid_TooLarge_ShouldReturnFalse()
-        {
-            Assert.IsFalse(((BettingRoundStatus)6).IsValid());
-        }
-
-        [TestMethod]
-        public void BettingRoundStatusIsValid_Valid_ShouldReturnTrue()
-        {
-            Assert.IsTrue(BettingRoundStatus.Raised.IsValid());
-        }
-
-        #endregion
-
         #region  HandTypesIsValid
 
         [TestMethod]

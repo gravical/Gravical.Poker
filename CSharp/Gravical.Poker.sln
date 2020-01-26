@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gravical.Poker.Core", "Gravical.Poker.Core\Gravical.Poker.Core.csproj", "{F9997E49-EAC1-4DD8-B24F-90ABD6B687B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gravical.Poker.Core.Tests", "Gravical.Poker.Core.Tests\Gravical.Poker.Core.Tests.csproj", "{AF13325A-548F-4FE7-876A-AD4B82FFAEED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gravical.Poker.Droid", "Gravical.Poker.Droid\Gravical.Poker.Droid.csproj", "{A6D84CA6-D771-4D2B-8301-FC8F8BB9705A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{4C9E3FFE-3FFB-4F1A-B6B7-F3DB5DF36D67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gravical.Poker.Game", "Gravical.Poker.Game\Gravical.Poker.Game.csproj", "{6B168A19-7EF3-444C-9132-EF87B4879469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gravical.Poker.Game.Tests", "Gravical.Poker.Game.Tests\Gravical.Poker.Game.Tests.csproj", "{284CD091-1989-4965-BB05-9899F11FD3F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9997E49-EAC1-4DD8-B24F-90ABD6B687B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9997E49-EAC1-4DD8-B24F-90ABD6B687B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9997E49-EAC1-4DD8-B24F-90ABD6B687B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9997E49-EAC1-4DD8-B24F-90ABD6B687B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF13325A-548F-4FE7-876A-AD4B82FFAEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF13325A-548F-4FE7-876A-AD4B82FFAEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF13325A-548F-4FE7-876A-AD4B82FFAEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF13325A-548F-4FE7-876A-AD4B82FFAEED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D84CA6-D771-4D2B-8301-FC8F8BB9705A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D84CA6-D771-4D2B-8301-FC8F8BB9705A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D84CA6-D771-4D2B-8301-FC8F8BB9705A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A6D84CA6-D771-4D2B-8301-FC8F8BB9705A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D84CA6-D771-4D2B-8301-FC8F8BB9705A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D84CA6-D771-4D2B-8301-FC8F8BB9705A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4C9E3FFE-3FFB-4F1A-B6B7-F3DB5DF36D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9E3FFE-3FFB-4F1A-B6B7-F3DB5DF36D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9E3FFE-3FFB-4F1A-B6B7-F3DB5DF36D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9E3FFE-3FFB-4F1A-B6B7-F3DB5DF36D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B168A19-7EF3-444C-9132-EF87B4879469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B168A19-7EF3-444C-9132-EF87B4879469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B168A19-7EF3-444C-9132-EF87B4879469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B168A19-7EF3-444C-9132-EF87B4879469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{284CD091-1989-4965-BB05-9899F11FD3F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284CD091-1989-4965-BB05-9899F11FD3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284CD091-1989-4965-BB05-9899F11FD3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284CD091-1989-4965-BB05-9899F11FD3F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54A8AD9B-FE5B-4F11-B5CD-74BADD05A0C5}
+	EndGlobalSection
+EndGlobal
